@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<head>
+    <html lang="nl-BE">
+    <meta charset="utf-8">
+
+    </html>
+    <title> Enchiladas met kip Siel Desmeth </title>
+
+</head>
+
+<header>
+    <h1> Enchiladas met kip Siel Desmeth </h1>
+    <figure> <img alt=" foto van Enchilada met kip" src="media/enchilada.png">
+        <figcaption>foto van Enchilada met kip </figcaption>
+    </figure>
+    <a href="https://foodbox.15gram.be/recept/enchiladas-met-kip/230">foodbox.15gram</a>
+    <a href="index.html"> index HTML</a> |
+    <a href="feedbackformulier.html"> formulier HTML</a> |
+    <A href="#gegevens"> gegevens Hyperlinks</A>
+</header>
+<form action="/action_page.php">
+    <fieldset> <A NAME="gegevens"></A>
+        <legend>Persoonlijke gegevens </legend>
+        <label for="fname">Voornaam:</label>
+        <input type="text" id="familienaam" name="fnaam"><br><br>
+        <label for="lname">Familienaam:</label>
+        <input type="text" id="voornaam" name="vnaam"><br><br>
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="e-mail"><br><br>
+        <label for="birthday">Geboortedatum:</label>
+        <input type="date" id="birthday" name="verjaardag"><br><br>
+        <input type="submit" value="Submit">
+    </fieldset>
+</form>
+<main>
+    <fieldset>
+        <legend> persoonlijke gegevens </legend>
+        <div>
+            <label for="radio"> Hoeveel keer per week kook je:</label><br>
+            <input type="radio" id="radio1" name="radio" value="optie1">
+            <label for="radio1">1-3 keer </label><br>
+            <input type="radio" id="radio2" name="radio" value="optie2">
+            <label for="radio2">4-6 keer</label><br>
+            <input type="radio" id="radio3" name="radio" value="optie3">
+            <label for="radio3">meer dan 6</label><br>
+        </div>
+        <div>
+            <label for="checkbox">favoriete keuken(s):</label><br>
+            <input type="checkbox" id="checkbox1" name="checkbox1" value="option1">
+            <label for="checkbox1">Italiaanse</label><br>
+            <input type="checkbox" id="checkbox2" name="checkbox2" value="optie2">
+            <label for="checkbox2">Spaanse</label><br>
+            <input type="checkbox" id="checkbox3" name="checkbox3" value="optie3">
+            <label for="checkbox3">Mexicaanse</label><br>
+            <input type="checkbox" id="checkbox4" name="checkbox4" value="optie4">
+            <label for="checkbox4">Griekse</label><br>
+            <input type="checkbox" id="checkbox5" name="checkbox5" value="optie5">
+            <label for="checkbox5">andere</label><br>
+        </div>
+        <div>
+            <label for="select">Hoe geavanceerd is je keuken? </label><br>
+            <select id="select" name="select">
+                <option value="option1">slecht </option>
+                <option value="option2">basis</option>
+                <option value="option3">uitgebreid</option>
+            </select>
+        </div>
+        <div>
+            <label for="textarea"> Wat is je favoriete gerecht?</label><br>
+            <textarea id="textarea" name="textarea" rows="4" cols="50"></textarea>
+        </div>
+        <div>
+            <label for="input1"> hoeveelheid kookervaring: (verplicht):</label><br>
+            <input type="text" id="input1" name="input1" placeholder="15 jaar" required>
+        </div>
+        <div>
+            <label for="input2">Voor hoeveel personen kook je?</label><br>
+            <input type="number" id="input2" name="input2">
+        </div>
+        <div>
+            <button type="submit">Verzenden</button>
+        </div>
+        <div>
+            <button type="submit">Verzenden</button>
+            <button type="reset">Reset</button>
+            <button type="button" onclick="window.location.href='verzenden.php';">Gegevens Verzenden</button>
+        </div>
+        </form>
+    </fieldset>
+</main>
+<footer>Siel Desmeth
+    <div id="currentDate"></div>
+    <script>
+        function displayDate() {
+            var currentDate = new Date();
+            var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            document.getElementById("currentDate").textContent = currentDate.toLocaleDateString('nl-NL', options);
+        }
+        displayDate();
+        setInterval(displayDate, 1000);
+    </script>
+</footer>
